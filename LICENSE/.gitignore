@@ -1,0 +1,49 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs and captures
+*.log
+*.pcap
+*.pcapng
+logs/
+alert_fast.txt
+alert_full.txt
+fast.log
+snort.log.*
+snort.alert
+
+# Temporary / generated files
+*.tmp
+*.bak
+*.old
+*.cache
+
+# Python virtual environments (if you use scripts later)
+venv/
+.venv/
+env/
+
+# Environment files
+.env
+.env.*
+
+# Build / export artifacts
+dist/
+build/
+output/
+
+# Snort runtime files
+*.pid
+*.sock
+
+# If you keep local system-specific configs out of Git
+/etc/snort/
