@@ -3,7 +3,7 @@
 ## Overview
 This document explains how alert logging was configured for the Snort 3 lab. The goal was to produce clear and compact output that could be reviewed easily during testing and included as project evidence in the repository.
 
-Snort supports multiple output and alerting modes. For this lab, fast alert mode was used because it writes concise one-line alerts that are suitable for demonstrations and quick testing [cite:116][cite:165].
+Snort supports multiple output and alerting modes. For this lab, fast alert mode was used because it writes concise one-line alerts that are suitable for demonstrations and quick testing.
 
 ## Logging Approach
 The lab used command-line alert logging rather than a more complex external logging pipeline. This kept the setup simple and made it easier to validate whether each custom rule was working correctly.
@@ -13,7 +13,7 @@ Fast alert mode was selected because it records:
 - alert identifier
 - alert message
 - protocol
-- source and destination information [cite:165][cite:243]
+- source and destination information
 
 ## Validation Command
 Before starting live monitoring, the configuration was tested with:
@@ -38,7 +38,7 @@ sudo snort -q -A alert_fast -i eth0 -c /etc/snort/snort.lua -R /etc/snort/rules/
 - `-c /etc/snort/snort.lua` = load the main Snort 3 configuration
 - `-R /etc/snort/rules/local.rules` = load custom rules from the local rules file
 
-Fast mode is designed for short one-line alert output and is commonly used in testing because it is faster and less verbose than full alert output [cite:116][cite:165].
+Fast mode is designed for short one-line alert output and is commonly used in testing because it is faster and less verbose than full alert output.
 
 ## Sample Alert Format
 Example alert lines:
@@ -48,7 +48,7 @@ Example alert lines:
 04/24-10:12:40.556901  [**] [1:1000002:1] TCP SYN Scan Detected [**] [Priority: 1] {TCP} 192.168.1.10:53422 -> 192.168.1.4:80
 ```
 
-This format is useful because it provides enough detail to verify detection without overwhelming the analyst with extra packet header information [cite:116][cite:243].
+This format is useful because it provides enough detail to verify detection without overwhelming the analyst with extra packet header information.
 
 ## Repository Evidence
 A sample output file is stored in:
