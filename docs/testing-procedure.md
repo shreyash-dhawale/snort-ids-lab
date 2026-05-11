@@ -3,7 +3,7 @@
 ## Overview
 This document explains how the Snort 3 lab was tested after configuration and rule creation. The testing process was designed to verify that the sensor could load the configuration, observe live traffic, and generate alerts when packets matched the custom rules.
 
-A good testing flow begins with validation, then moves to simple packet matches, and only after that proceeds to more specific protocol or application-layer tests [cite:132][cite:247].
+A good testing flow begins with validation, then moves to simple packet matches, and only after that proceeds to more specific protocol or application-layer tests.
 
 ## Step 1: Validate Configuration
 Before generating any traffic, the Snort configuration was tested:
@@ -55,7 +55,7 @@ curl http://<target-ip>/admin
 **Expected result:** Trigger the admin page probe rule if the HTTP request reaches the monitored host and matches the `/admin` content condition.
 
 ## Step 4: Review Alert Output
-While Snort was running, the console output was observed for alerts. In fast alert mode, matching packets should generate one-line alert messages showing the alert type, protocol, and endpoint details [cite:165][cite:116].
+While Snort was running, the console output was observed for alerts. In fast alert mode, matching packets should generate one-line alert messages showing the alert type, protocol, and endpoint details.
 
 If an alert appeared, the test was considered successful. If no alert appeared, the troubleshooting process focused on:
 - interface selection,
