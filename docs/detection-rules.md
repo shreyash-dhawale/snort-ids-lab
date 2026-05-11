@@ -3,7 +3,7 @@
 ## Overview
 This document explains the custom Snort 3 rules used in this lab. The rules were written for local testing and are stored in `config/local.rules`.
 
-In Snort 3, rules define the packet conditions that must be met before an alert is generated. A rule typically contains a header and a body with rule options such as `msg`, `content`, and `sid` [cite:138][cite:132].
+In Snort 3, rules define the packet conditions that must be met before an alert is generated. A rule typically contains a header and a body with rule options such as `msg`, `content`, and `sid`.
 
 ## Rule File Location
 The repository stores local rules in:
@@ -63,7 +63,7 @@ alert tcp any any -> $HOME_NET 80 (content:"/admin"; http_uri; msg:"Admin Page P
 **Purpose:** Detect HTTP requests to the `/admin` path.  
 **Why it was used:** This simulates a basic web reconnaissance or probing attempt.
 
-Snort rule options such as `content` and protocol-specific keywords help narrow detection to specific traffic characteristics instead of matching everything broadly [cite:138][cite:245].
+Snort rule options such as `content` and protocol-specific keywords help narrow detection to specific traffic characteristics instead of matching everything broadly.
 
 ## Rule Design Notes
 The rules in this lab were intentionally simple. The goal was not deep production-grade detection engineering, but rather to understand:
@@ -88,4 +88,4 @@ This ruleset can be extended with:
 - suspicious user-agent matching
 - rule tuning with `flow`, `nocase`, and service-specific keywords
 
-The Snort 3 Rule Writing Guide provides a much wider set of options for refining matches and improving rule precision [cite:245][cite:248].
+The Snort 3 Rule Writing Guide provides a much wider set of options for refining matches and improving rule precision.
