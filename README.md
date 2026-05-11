@@ -40,14 +40,14 @@ snort-ids-lab/
 ```
 
 ## Lab Setup
-The lab was configured on Kali Linux using Snort 3. Instead of creating a configuration from scratch, the default `snort.lua` file was used as the starting point and then modified to support local testing and custom rules. This matches the normal Snort 3 workflow, where the standard configuration is extended rather than replaced from a blank file [web:105][web:239].
+The lab was configured on Kali Linux using Snort 3. Instead of creating a configuration from scratch, the default `snort.lua` file was used as the starting point and then modified to support local testing and custom rules. This matches the normal Snort 3 workflow, where the standard configuration is extended rather than replaced from a blank file.
 
 ## Configuration Approach
 The Snort setup was based on:
 - Default `snort.lua` as the primary configuration file.
 - Custom `local.rules` for locally written detection rules.
 - Rule loading through Snort’s configuration and command-line options.
-- Alert review using fast alert mode, which produces compact one-line alerts [web:105][web:116][web:237].
+- Alert review using fast alert mode, which produces compact one-line alerts.
 
 ## Example Test Rules
 Example local rules used in this lab include:
@@ -121,7 +121,7 @@ During setup, common issues included:
 - `local.rules` not being loaded
 - Invalid or incomplete network path between the attacker and monitored host
 
-A practical troubleshooting path is to first validate the config with `-T`, then test a simple ICMP rule, and only after that move to more specific HTTP or scan-based rules [web:105][web:112].
+A practical troubleshooting path is to first validate the config with `-T`, then test a simple ICMP rule, and only after that move to more specific HTTP or scan-based rules .
 
 ## Future Improvements
 - Add more application-layer detection rules
